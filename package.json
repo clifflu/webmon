@@ -1,0 +1,23 @@
+{
+  "name": "webmon",
+  "version": "0.0.0",
+  "description": "Website monitor",
+  "main": "hdlr_sam.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clifflu/webmon.git"
+  },
+  "keywords": ["AWS", "Monitor", "webmon"],
+  "author": "Cliff Chao-kuan Lu <clifflu@gmail.com> (https://blog.clifflu.net/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/clifflu/webmon/issues"
+  },
+  "homepage": "https://github.com/clifflu/webmon#readme"
+}

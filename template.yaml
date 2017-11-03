@@ -1,0 +1,42 @@
+AWSTemplateFormatVersion : '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: [webmon] Website monitor
+Parameters:
+  # CacheTtl:
+  #   Type: Number
+  #   Default: 1800000
+  #   Description: AMI cache timeout
+Resources:
+  Webmon:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: hdlr_sam.webmon
+      Runtime: nodejs6.10
+      CodeUri: .
+      Timeout: 10
+      MemorySize: 128
+      Policies:
+        Statement:
+          - Effect: Allow
+            Action: cloudwatch:PutMetricData
+            Resource: "*"
+      # Environment:
+      #   Variables:
+      #     TTL: !Ref CacheTtl
+      # Events:
+      #   PutResource:
+      #     Type: Api
+      #     Properties:
+      #       Path: /ami
+      #       Method: get
+# Outputs:
+#   EndPoint:
+#     Description: AMI ID list primary endpoint
+#     Value:
+#       Fn::Join:
+#         - ""
+#         - - https://
+#           - !Ref ServerlessRestApi
+#           - .execute-api.
+#           - !Ref AWS::Region
+#           - .amazonaws.com/Prod/ami
