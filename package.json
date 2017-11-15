@@ -13,11 +13,19 @@
     "type": "git",
     "url": "git+https://github.com/clifflu/webmon.git"
   },
-  "keywords": ["AWS", "Monitor", "webmon"],
+  "keywords": [
+    "AWS",
+    "Monitor",
+    "webmon"
+  ],
   "author": "Cliff Chao-kuan Lu <clifflu@gmail.com> (https://blog.clifflu.net/)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/clifflu/webmon/issues"
   },
-  "homepage": "https://github.com/clifflu/webmon#readme"
+  "homepage": "https://github.com/clifflu/webmon#readme",
+  "dependencies": {
+    "aws-sdk": "^2.149.0",
+    "extend": "^3.0.1"
+  }
 }
